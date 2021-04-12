@@ -1,0 +1,348 @@
+/*-family:'Nunito Sans', sans-serif;*/
+
+
+body, html{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	height: 100%;
+}
+.grid-container{
+	display: grid;
+	grid-template-columns: 1fr 1.3fr 1.5fr;
+	grid-template-rows: 1fr 4fr 2.5fr 1.5fr;
+	padding: 0.5em;
+	height: 100%;
+}
+.flex-container{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1.5em;
+	list-style-type: none;
+	font-family:'Nunito Sans', sans-serif;
+}
+li a{
+	text-decoration: none;
+}
+.main{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	background: rgb(247, 178, 158);
+}
+.num{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	background: rgb(179, 154, 237);
+}
+.yum{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	background: rgb(207, 144, 224);
+}
+.footer{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 4;
+	grid-row-end: 5;
+	background: rgb(166, 222, 106);
+}
+.header{
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	background: rgb(214, 195, 84);
+}
+.candy{
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 2;
+	grid-row-end: 5;
+	background-color: rgb(200, 210, 227);
+	background-image: url(../images/pattern.png);
+	background-size: contain;
+	background-position: center;
+}
+@media (max-width: 550px){
+  .grid-container{
+  	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 4fr 5fr 2.5fr 1.5fr;
+	padding: 0em;}
+  .header{
+  	grid-area: 1/1/2/3;}
+    .main{
+  	grid-area: 2/1/3/3;}
+    .candy{
+  	grid-area: 3/1/4/3;}
+    .num{
+  	grid-area: 4/1/5/2;}
+    .yum{
+  	grid-area: 4/2/5/3;}
+  	.footer{
+  	grid-area: 5/1/6/3;}
+
+  	.flex-container{
+  		display: flex;
+  		justify-content: space-evenly;
+  		margin-left: -1em;}
+}
+@media (max-width: 800px){
+  .grid-container{
+  	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 4fr 5fr 2.5fr 1.5fr;
+	padding: 0em;}
+  .header{
+  	grid-area: 1/1/2/3;}
+    .main{
+  	grid-area: 2/1/3/3;}
+    .candy{
+  	grid-area: 3/1/4/3;}
+    .num{
+  	grid-area: 4/1/5/2;}
+    .yum{
+  	grid-area: 4/2/5/3;}
+  	.footer{
+  	grid-area: 5/1/6/3;}
+
+  	.flex-container{
+  		display: flex;
+  		justify-content: space-evenly;
+  		margin-left: -5em;}
+}
+@media (max-width: 900px){
+  .grid-container{
+  	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 4fr 5fr 2.5fr 1.5fr;
+	padding: 0em;}
+  .header{
+  	grid-area: 1/1/2/3;}
+    .main{
+  	grid-area: 2/1/3/3;}
+    .candy{
+  	grid-area: 3/1/4/3;}
+    .num{
+  	grid-area: 4/1/5/2;}
+    .yum{
+  	grid-area: 4/2/5/3;}
+  	.footer{
+  	grid-area: 5/1/6/3;}
+
+  	.flex-container{
+  		display: flex;
+  		justify-content: space-evenly;
+  		margin-left: -5em;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*html, body{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+
+body{ 
+	display: flex;
+	flex-direction: column;
+ }
+header {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	padding: 0px;
+	margin: 0px;
+	background-color: pink;
+	height: 200px;
+}
+.img-con{
+	background-image: url(../images/nyc4.jpg);
+	background-size: cover;
+	background-position: center;
+	width: 150px;
+	height: 150px;
+	padding: 20px;
+	margin-top: 5px;
+}
+header .Navs{
+	margin-top: 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+li{
+	list-style-type: none;
+	padding: 40px;
+	background-color: grey;
+}
+ul{ margin: 0px;
+ }
+main{
+	flex-shrink: 2em;
+	background-color: red;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+.Box{
+	
+	background-color: cyan;
+	width: 200px;
+	border: 1px solid black;
+	padding: 20px;
+	margin-top: 5px;
+}
+#Box-1{
+	background-image: url(../images/nyc3.jpg);
+	height: 575px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	flex-shrink: 2;
+}
+
+
+
+footer
+{
+	background-color: grey;
+	text-align: center;
+	margin-top:  5px;
+}
+
+
+@media only screen and (max-width: 500px){
+  header .Navs {
+ 	display: flex;
+ 	flex-direction: column;
+ 	background-color: grey;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;}}*/
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
